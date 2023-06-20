@@ -7,7 +7,6 @@
     $historico = $_POST['historico'];
     $cheque = $_POST['cheque'];
    
-
     echo "<h1>Dados do Fluxo</h1>";
     echo "Data: $data <br>";
     echo "Tipo: $tipo <br>";
@@ -18,10 +17,12 @@
     $sql = "INSERT INTO fluxo_caixa (data, tipo, valor, historico, cheque)";
 
     $sql .= "VALUES ('".$data."','".$tipo."','".$valor."','".$historico."','".$cheque."')";
-    echo $sql."<br>";
+    //echo $sql."<br>"; -> apresenta o que foi cadastrado
     $result = mysqli_query($con, $sql);
-    if($result)
+    if($result) {
+        echo "<br>";
         echo "Dados cadastrados com sucesso!";
+    }
     else    
         echo "Erro ao tentar cadastrar!";
 ?>

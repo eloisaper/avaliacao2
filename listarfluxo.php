@@ -24,6 +24,7 @@
             <th>tipo</th>
             <th>historico</th>
             <th>Cheque</th>
+            <th>Deletar</th>
         </tr>
         <?php
             do{
