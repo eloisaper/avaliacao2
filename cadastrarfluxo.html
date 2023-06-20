@@ -11,12 +11,12 @@
     <form action="cadastrarfluxo.php" method="post" enctype="multipart/form-data">
         <div>
             <label for="data">Data</label>
-            <input type="date" name="data" id="data">
+            <input type="date" name="data" id="data" pattern="dd/mm/YYYY">
         </div>
         <div>
-            <label for="tipo">Tipo de Transação</label>
-            <input type="radio" name="tipo" id="tipo" value="1"/>Sim<br />
-            <input type="radio" name="tipo" id="tipo" value="0"/>Não<br />
+            <label for="tipo">Tipo de Transação</label><br>
+            <input type="radio" name="tipo" id="tipo" value="entrada"/>Entrada<br />
+            <input type="radio" name="tipo" id="tipo" value="saida"/>Saida<br />
         </div>
         <div>
             <label for="valor">Valor</label>
