@@ -8,16 +8,17 @@
 </head>
 <body>
     <h1>Consulta do Fluxo de Caixa</h1>
-    <form action="consultarfluxocaixa_exe.php" method="post">
+    <form action="consultarfluxocaixa.php" method="post">
         <div>
             <label for="tipo">Tipo de Consulta</label><br>
-            <input type="radio" name="tipo" id="tipo" value="entrada"/>Entrada<br />
-            <input type="radio" name="tipo" id="tipo" value="saida"/>Saida<br />
-            <input type="radio" name="tipo" id="tipo" value="saldo"/>Saldo total<br />
+            <input type="radio" name="tipo" id="tipo" value="entrada"/>Total Entrada
+            <input type="radio" name="tipo" id="tipo" value="saida"/>Total Saida
+            <input type="radio" name="tipo" id="tipo" value="saldo"/>Saldo total
         </div>
         <div>
             <input type="submit" value="Enviar">
         </div>
     </form>
+    <h4><a href='index.html'>voltar</a></h4>
 </body>
 </html>
