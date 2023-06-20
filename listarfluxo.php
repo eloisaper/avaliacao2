@@ -16,7 +16,7 @@
         $row = mysqli_fetch_array($result);
     ?>
 
-    <h1>Listar Fluxos</h1>
+    <h1>Listar Transações</h1>
     <table width="500" align="center" border="1">
         <tr> 
             <th>id</th>
