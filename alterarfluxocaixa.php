@@ -1,6 +1,6 @@
 <?php
 include('conexao.php');
-$id = $_POST['id'];
+$id = $_GET['id'];
 $sql = "SELECT * FROM fluxo_caixa WHERE id = $id";
 $result = mysqli_query($con,$sql);
 $row = mysqli_fetch_array($result);
@@ -16,34 +16,37 @@ $row = mysqli_fetch_array($result);
 </head>
 <body>
     <h1>Alterar Fluxo de Caixa</h1>
-    <form action="alterarfluxo_exe.php" method="post">  
+    <form action="alterarfluxocaixa_exe.php" method="post">  
           <fieldset>
-            
+        <div>
         <input name="id" type="hidden" value="<?php echo $row ['id']?>">
-        <div>
-            <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required
-            value="<?php echo $row ['nome_usuario']?>">
         </div>
         <div>
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email" placeholder="Digite seu email" required
-            value="<?php echo $row ['email_usuario']?>">
-
+            <label for="data">Data: </label>
+            <input type="text" name="data" id="data" placeholder="Digite a data" required
+            value="<?php echo $row ['data']?>">
         </div>
         <div>
-            <label for="fone">Fone: </label>
-            <input type="tel" name="fone" id="fone" placeholder="Digite seu telefone"  pattern="\([0-9]{2}\)([9]{1})?[0-9]{4}-[0-9]{4}"
-                value="<?php echo $row ['fone_usuario']?>">
+            <label for="tipo">Tipo de Transação</label><br>
+            <input type="radio" name="tipo" id="tipo" value="entrada"/>Entrada<br/>
+            <input type="radio" name="tipo" id="tipo" value="saida"/>Saida<br/>
         </div>
         <div>
-            <input type="file" name="foto" id="foto" accept="image/*">
+            <label for="valor">Valor: </label>
+            <input type="valor" name="valor" id="valor" placeholder="Digite o valor" 
+                value="<?php echo $row ['valor']?>">
         </div>
         <div>
-            <label for="senha">Senha: </label>
-            <input type="password" name="senha" id="senha" placeholder="Password" required
-            value="<?php echo $row ['senha']?>">
-
+            <label for="historico">Historico: </label>
+            <input type="historico" name="historico" id="historico" placeholder="Digite o historico" 
+                value="<?php echo $row ['valor']?>">
+        </div>
+        <div>
+            <label for="cheque">Cheque: </label>
+            <select name="cheque">
+                <option value="sim">sim</option>
+                <option value="nao">Nao</option>
+            </select>
         </div>
     <input type="submit" value="Salvar">
 </fieldset>

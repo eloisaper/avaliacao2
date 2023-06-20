@@ -22,6 +22,7 @@
             <th>id</th>
             <th>data</th>
             <th>tipo</th>
+            <th>valor</th>
             <th>historico</th>
             <th>Cheque</th>
             <th>Deletar</th>
@@ -32,13 +33,15 @@
                     echo "<td>".$row['id']."</td>";
                     echo "<td>".$row['data']."</td>";
                     echo "<td>".$row['tipo']."</td>";
+                    echo "<td>".$row['valor']."</td>";
                     echo "<td>".$row['historico']."</td>";
                     echo "<td>".$row['cheque']."</td>";
                     echo "<td><a href='deletarfluxo.php?id=".$row['id']."'>deletar</a></td>";
+                    echo "<td><a href='alterarfluxocaixa.php?id=".$row['id']."'>alterar</a></td>";
                 echo "</tr>";
             } while($row = mysqli_fetch_array($result));
             echo "<tr>";
-                    echo "<td><a href='index.html>voltar</a></td>";
+                    echo "<td><a href='index.html'>voltar</a></td>";
             echo "</tr>";
         ?>
     </table>

@@ -26,5 +26,5 @@
     else    
         echo "Erro ao tentar cadastrar!";
 
-    echo "<h1><a href='index.html>voltar</a></h1>";
+    echo "<p><a href='index.html'>voltar</a></p>";
 ?>
